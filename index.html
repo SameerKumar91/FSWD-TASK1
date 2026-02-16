@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sameer Kumar - Personal Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Config for Tailwind -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: "#4f46e5", // Indigo 600
+              secondary: "#1e293b", // Slate 800
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 antialiased selection:bg-primary selection:text-white"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#" class="text-2xl font-bold text-primary tracking-tighter"
+              >SK<span class="text-gray-800">.</span></a
+            >
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#hero"
+              class="text-sm font-medium hover:text-primary transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-sm font-medium hover:text-primary transition-colors"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-sm font-medium hover:text-primary transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="text-sm font-medium hover:text-primary transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="px-5 py-2.5 rounded-full bg-primary text-white text-sm font-medium hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/30"
+              >Let's Talk</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-600 hover:text-primary focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-2">
+          <a
+            href="#hero"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-base font-medium text-primary font-bold hover:bg-gray-50 rounded-md"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+      >
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-indigo-100 text-primary text-xs font-bold tracking-widest uppercase mb-4 animate-pulse"
+          >Welcome to my portfolio</span
+        >
+        <h1
+          class="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6"
+        >
+          Hi, I'm
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600"
+            >Sameer Kumar</span
+          >
+        </h1>
+        <p
+          class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          Aspiring Developer eager to learn, contribute, and build meaningful
+          solutions. Turning coffee into code and ideas into reality.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#projects"
+            class="px-8 py-3.5 rounded-full bg-primary text-white font-semibold shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 hover:-translate-y-1 transition-all"
+            >View Projects</a
+          >
+          <a
+            href="#contact"
+            class="px-8 py-3.5 rounded-full bg-white text-gray-800 border border-gray-200 font-semibold hover:border-primary hover:text-primary hover:-translate-y-1 transition-all"
+            >Contact Me</a
+          >
+        </div>
+
+        <!-- Social Links -->
+        <div class="mt-12 flex justify-center space-x-6">
+          <a
+            href="https://github.com/SameerKumar1204"
+            target="_blank"
+            class="text-gray-400 hover:text-gray-900 transition-colors text-2xl"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sameer-kumar-732491323/"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 transition-colors text-2xl"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://x.com/SameerPrasad29"
+            target="_blank"
+            class="text-gray-400 hover:text-black transition-colors text-2xl"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <!-- X icon mapped to twitter for fontawesome 6.4 compat -->
+        </div>
+      </div>
+
+      <!-- Background Elements -->
+      <div
+        class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none opacity-30"
+      >
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"
+        ></div>
+        <div
+          class="absolute top-20 right-10 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"
+        ></div>
+        <div
+          class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"
+        ></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          <div class="mb-10 lg:mb-0 relative">
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+            >
+              <!-- Placeholder for your image - Replace 'src' with your actual image path like 'me.jpg' -->
+              <img
+                src="https://placehold.co/600x600/4f46e5/white?text=Sameer+Kumar"
+                alt="Sameer Kumar"
+                class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <!-- Decorative dots -->
+            <div
+              class="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-100 rounded-full -z-10"
+            ></div>
+            <div
+              class="absolute -top-6 -left-6 w-32 h-32 bg-indigo-50 rounded-full -z-10"
+            ></div>
+          </div>
+
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              I'm excited to bring my technical skills, curiosity, and
+              willingness to learn into a positive and collaborative
+              environment. I hope to contribute meaningfully to real-world
+              projects, learn from experienced mentors, and grow both personally
+              and professionally.
+            </p>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              I enjoy working alongside passionate teams who value innovation
+              and shared success, and I'm always ready to tackle new challenges
+              and expand my horizons in the world of technology.
+            </p>
+
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+              <h3 class="font-bold text-gray-900 mb-4">Education Journey</h3>
+              <div class="space-y-6 border-l-2 border-indigo-200 pl-6 ml-2">
+                <div class="relative">
+                  <span
+                    class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-primary border-4 border-white"
+                  ></span>
+                  <h4 class="text-lg font-semibold text-gray-900">
+                    B.Tech in CSE
+                  </h4>
+                  <p class="text-indigo-600 text-sm font-medium mb-1">
+                    Silver Oak University | 2023 - Present
+                  </p>
+                  <p class="text-gray-500 text-sm">
+                    Currently Pursuing Bachelor's Degree
+                  </p>
+                </div>
+                <div class="relative">
+                  <span
+                    class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-gray-300 border-4 border-white"
+                  ></span>
+                  <h4 class="text-lg font-semibold text-gray-900">
+                    Senior Secondary (Class 12)
+                  </h4>
+                  <p class="text-indigo-600 text-sm font-medium mb-1">
+                    Gurukul Public School | 2021 - 2023
+                  </p>
+                  <p class="text-gray-500 text-sm">
+                    Completed under CBSE Board
+                  </p>
+                </div>
+                <div class="relative">
+                  <span
+                    class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-gray-300 border-4 border-white"
+                  ></span>
+                  <h4 class="text-lg font-semibold text-gray-900">
+                    Secondary (Class 10)
+                  </h4>
+                  <p class="text-indigo-600 text-sm font-medium mb-1">
+                    St. Anns School | 2017 - 2021
+                  </p>
+                  <p class="text-gray-500 text-sm">
+                    Completed under CBSE Board
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Core Technologies</h2>
+          <p class="mt-4 text-gray-600">My technical toolkit and stack</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Skill Cards -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fab fa-html5 text-4xl text-orange-500 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">HTML5</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fab fa-css3-alt text-4xl text-blue-500 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">CSS3</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fab fa-js text-4xl text-yellow-400 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">JavaScript</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fab fa-python text-4xl text-blue-400 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">Python</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fas fa-database text-4xl text-indigo-500 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">PostgreSQL</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fas fa-wind text-4xl text-cyan-500 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">Tailwind CSS</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fab fa-java text-4xl text-red-500 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">Java</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fas fa-code text-4xl text-gray-700 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">C Programming</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fab fa-bootstrap text-4xl text-purple-600 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">Bootstrap</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fab fa-figma text-4xl text-pink-500 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">Figma</h3>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center group"
+          >
+            <i
+              class="fas fa-cubes text-4xl text-emerald-500 mb-3 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="font-semibold text-gray-800">OOPS</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Featured Projects</h2>
+            <p class="mt-4 text-gray-600">What I've been working on lately</p>
+          </div>
+          <a
+            href="https://github.com/SameerKumar1204"
+            target="_blank"
+            class="hidden md:inline-flex items-center font-medium text-primary hover:text-indigo-700 transition-colors"
+          >
+            View GitHub Profile <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <article
+            class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+          >
+            <div class="h-48 overflow-hidden relative">
+              <!-- Placeholder for SchemeEase Image -->
+              <img
+                src="https://placehold.co/800x400/indigo/white?text=SchemeEase+Project"
+                alt="SchemeEase"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="https://github.com/SameerKumar1204/IDT-Project"
+                  target="_blank"
+                  class="px-6 py-2 bg-white rounded-full text-gray-900 font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  >View Code</a
+                >
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">SchemeEase</h3>
+              <p class="text-gray-600 mb-4 line-clamp-3">
+                Developed a web application that recommends suitable government
+                and private schemes based on user inputs. Integrated AI-based
+                logic to personalize suggestions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-orange-100 text-orange-600 text-xs font-semibold rounded-full"
+                  >HTML</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full"
+                  >CSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-semibold rounded-full"
+                  >JavaScript</span
+                >
+              </div>
+              <a
+                href="https://github.com/SameerKumar1204/IDT-Project"
+                target="_blank"
+                class="inline-flex items-center text-sm font-semibold text-primary hover:text-indigo-800"
+              >
+                <i class="fab fa-github mr-2"></i> Source Code
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article
+            class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+          >
+            <div class="h-48 overflow-hidden relative">
+              <!-- Placeholder for BookBazaar Image -->
+              <img
+                src="https://placehold.co/800x400/1e293b/white?text=BookBazaar+SQL"
+                alt="BookBazaar"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <a
+                  href="https://github.com/SameerKumar1204/PostgreSQL"
+                  target="_blank"
+                  class="px-6 py-2 bg-white rounded-full text-gray-900 font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                  >View Code</a
+                >
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                BookBazaar Data Analysis
+              </h3>
+              <p class="text-gray-600 mb-4 line-clamp-3">
+                Worked on a mock book sales database using PostgreSQL. Wrote
+                queries to explore customer behavior, sales trends, and revenue
+                by applying SQL concepts like joins, filters, and aggregations.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-600 text-xs font-semibold rounded-full"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-200 text-gray-700 text-xs font-semibold rounded-full"
+                  >Data Analysis</span
+                >
+              </div>
+              <a
+                href="https://github.com/SameerKumar1204/PostgreSQL"
+                target="_blank"
+                class="inline-flex items-center text-sm font-semibold text-primary hover:text-indigo-800"
+              >
+                <i class="fab fa-github mr-2"></i> Source Code
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Call to Action -->
+    <section
+      class="py-16 bg-gradient-to-r from-primary to-indigo-700 text-white"
+    >
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Check out my Resume</h2>
+        <p class="text-indigo-100 mb-8 text-lg">
+          Detailed history of my academic and professional journey.
+        </p>
+        <a
+          href="#"
+          target="_blank"
+          class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+        >
+          <i class="fas fa-file-download mr-2"></i> Download Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div class="p-8 md:p-12">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl font-bold text-gray-900">Get In Touch</h2>
+              <p class="mt-2 text-gray-600">
+                Have a project in mind or just want to say hi?
+              </p>
+            </div>
+
+            <!-- Note: For a static GitHub page, we use Formspree or similar services. 
+                         Replace {your_form_id} with your actual Formspree ID or use mailto logic. -->
+            <form
+              action="https://formspree.io/f/YOUR_FORM_ID_HERE"
+              method="POST"
+              class="space-y-6"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                    placeholder="Sameer Kumar"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Message</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/30"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-6 md:mb-0">
+          <span class="text-2xl font-bold tracking-tighter">SK.</span>
+          <p class="text-gray-400 text-sm mt-1">
+            &copy; 2025 Sameer Kumar. All rights reserved.
+          </p>
+        </div>
+
+        <div class="flex space-x-6">
+          <a
+            href="https://www.linkedin.com/in/sameer-kumar-732491323/"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors text-xl"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/SameerKumar1204"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors text-xl"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://x.com/SameerPrasad29"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors text-xl"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a
+      href="#hero"
+      class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-all opacity-0 invisible"
+      id="backToTop"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile Menu Toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+
+      // Navbar Scroll Effect & Back to Top visibility
+      const navbar = document.getElementById("navbar");
+      const backToTop = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("shadow-md");
+          navbar.classList.replace("bg-white/80", "bg-white/95");
+        } else {
+          navbar.classList.remove("shadow-md");
+          navbar.classList.replace("bg-white/95", "bg-white/80");
+        }
+
+        if (window.scrollY > 300) {
+          backToTop.classList.remove("opacity-0", "invisible");
+        } else {
+          backToTop.classList.add("opacity-0", "invisible");
+        }
+      });
+
+      // Animation on scroll (Simple Fade In)
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add(
+          "transition-all",
+          "duration-1000",
+          "opacity-0",
+          "translate-y-10",
+        );
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
